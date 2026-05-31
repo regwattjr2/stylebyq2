@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <!-- SEO Optimization -->
+    <title>Styled By Q | Intentional Interior Decorating & Home Staging Services</title>
+    <meta name="description" content="Elevate your home with intentional interior decorating and home staging by Styled By Q. Offering consultations, virtual design, partial and full staging, and complete room transformations.">
+    <meta name="keywords" content="interior decorating, home staging, room styling, virtual interior design, space refresh, modern farmhouse style, Waco decorator">
+    <meta name="author" content="Styled By Q">
+    
+    <!-- Open Graph Metadata -->
+    <meta property="og:title" content="Styled By Q | Intentional Interior Decorating">
+    <meta property="og:description" content="Elevate your home with intentional interior decorating, staging, and room styling. Warm, premium, curated spaces tailored to your lifestyle.">
+    <meta property="og:image" content="./assets/hero_living_room.png">
+    <meta property="og:url" content="https://sites.google.com/view/styledbyq/services">
+    <meta property="og:type" content="website">
+    
+    <!-- Styling stylesheet -->
+    <link rel="stylesheet" href="index.css?v=3">
+    <link rel="icon" type="image/png" href="./assets/shelf_styling.png">
+</head>
+<body class="gradient">
+
+    <!-- Sticky Header -->
+    <header id="main-header">
+        <div class="container header-container">
+            <a href="#hero" class="logo" id="header-logo">Styled By Q</a>
+            
+            <nav class="nav-links" id="main-nav">
+                <a href="#hero" class="nav-item active" id="nav-home">Home</a>
+                <a href="#services" class="nav-item" id="nav-services">Services</a>
+                <a href="#about" class="nav-item" id="nav-about">About</a>
+                <a href="#testimonials" class="nav-item" id="nav-testimonials">Testimonials</a>
+                <a href="#contact" class="nav-item" id="nav-contact">Contact</a>
+            </nav>
+            
+            <div class="cta-nav">
+                <button class="btn-outline" onclick="openBookingDrawer('General Inquiry')" id="btn-header-inquire">Inquire</button>
+            </div>
+            
+            <button class="menu-toggle" id="mobile-menu-btn" aria-label="Toggle navigation menu">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="4" y1="12" x2="20" y2="12"></line>
+                    <line x1="4" y1="6" x2="20" y2="6"></line>
+                    <line x1="4" y1="18" x2="20" y2="18"></line>
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="container">
+            <div class="hero-grid">
+                <div class="hero-content">
+                    <span class="hero-subtitle">CURATED & INTENTIONAL</span>
+                    <h1>Designing spaces that tell your story.</h1>
+                    <p>I provide intentional interior decorating services that elevate your home through thoughtfully curated styling, organic textures, and a deeply personalized approach to your unique lifestyle.</p>
+                    <div style="display: flex; gap: 1rem;">
+                        <a href="#services" class="btn-primary" id="btn-hero-explore">Explore Services</a>
+                        <button class="btn-outline" onclick="openBookingDrawer('General Consultation')" id="btn-hero-consult">Book Consultation</button>
+                    </div>
+                </div>
+                <div class="hero-image-wrapper">
+                    <img src="./assets/hero_living_room.png" alt="Stunning modern farmhouse styled living room with warm neutrals" class="hero-image" loading="eager">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Intro -->
+    <section class="category-intro section-padding">
+        <div class="container">
+            <span class="uppercase-tag">Our Philosophy</span>
+            <h2>Elevating The Everyday</h2>
+            <div class="editorial-divider"></div>
+            <p>Every home deserves to be a sanctuary. At Styled by Q, the decorating process is focused on creating visual harmony, highlighting structural character, and selecting pieces that inspire warmth, comfort, and timeless beauty.</p>
+        </div>
+    </section>
+
+    <!-- Services Catalog Grid -->
+    <section class="services-catalog section-padding" id="services">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 5rem;">
+                <span class="uppercase-tag">A Curated Selection</span>
+                <h2 style="font-size: 2.8rem;">Design & Styling Services</h2>
+                <p style="max-width: 600px; margin: 1rem auto 0 auto; color: var(--text-muted);">From quick, hands-on visual refreshes to comprehensive, full-service styling, explore the ways we can transform your space together.</p>
+            </div>
+            
+            <div class="catalog-grid">
+                
+                <!-- Service 1: Decorating Consultation -->
+                <div class="service-card" id="service-consultation">
+                    <div class="card-image-box">
+                        <img src="./assets/orig_home_1.png" alt="Decorating Consultation styled space by Styled By Q" class="card-image" loading="lazy">
+                    </div>
+                    <div class="card-body">
+                        <span class="uppercase-tag">Step One</span>
+                        <h3 class="card-title">Decorating Consultation</h3>
+                        <span class="card-price">$200 | Up to 2 hours</span>
+                        <div class="editorial-divider" style="margin: 1rem 0;"></div>
+                        <p class="card-desc">Perfect for clients who need expert direction, structural layout clarity, and a confident plan of action before getting started on their design journey.</p>
+                        <p class="card-desc" style="font-size: 0.88rem; font-style: italic;">✨ A personalized in-home or virtual session designed to assess your space. Includes customized layout recommendations, color palette guidance, and décor direction—giving you the clarity to move forward with absolute ease.</p>
+                        <div class="card-footer">
+                            <button class="btn-primary" onclick="openBookingDrawer('Decorating Consultation')" id="btn-book-consult">Book Consultation</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service 2: Virtual Design Package -->
+                <div class="service-card" id="service-virtual-design">
+                    <div class="card-image-box">
+                        <img src="./assets/moodboard_laptop.png" alt="Laptop on styled oak desk showing virtual interior design moodboard" class="card-image" loading="lazy">
+                    </div>
+                    <div class="card-body">
+                        <span class="uppercase-tag">Remote Design</span>
+                        <h3 class="card-title">Virtual Design Package</h3>
+                        <span class="card-price">$350–$500 per room</span>
+                        <div class="editorial-divider" style="margin: 1rem 0;"></div>
+                        <p class="card-desc">Perfect for clients who want a cohesive, professionally designed plan and the flexibility to shop and bring their space to life at their own pace.</p>
+                        <p class="card-desc" style="font-size: 0.88rem; font-style: italic;">✨ You’ll receive a fully customized virtual decorating experience and visual blueprint. This includes a curated digital mood board, intentional color palette, hand-selected furniture/décor list with shopping links, and layout guidance.</p>
+                        <div class="card-footer">
+                            <button class="btn-primary" onclick="openBookingDrawer('Virtual Design Package')" id="btn-book-virtual">Inquire Package</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service 3: Home Staging -->
+                <div class="service-card" id="service-home-staging">
+                    <div class="card-image-box">
+                        <img src="./assets/bedroom_staged.png" alt="Staged luxury modern farmhouse master bedroom with linen duvet" class="card-image" loading="lazy">
+                    </div>
+                    <div class="card-body">
+                        <span class="uppercase-tag">Real Estate Staging</span>
+                        <h3 class="card-title">Home Staging</h3>
+                        <span class="card-price">$250 – $1,500+</span>
+                        <div class="editorial-divider" style="margin: 1rem 0;"></div>
+                        <p class="card-desc">Perfect for homeowners and realtors preparing a property for a successful, high-value, and swift market sale.</p>
+                        
+                        <!-- Sub-service tiers -->
+                        <div class="sub-services-grid">
+                            <div class="sub-service-tier">
+                                <div class="tier-title-bar">
+                                    <span class="tier-name">Consultation & Styling Plan</span>
+                                    <span class="tier-price">$250–$350</span>
+                                </div>
+                                <p class="tier-desc">Room-by-room walkthrough, staging plan, furniture placement guidance, and a curated shopping/styling checklist.</p>
+                            </div>
+                            <div class="sub-service-tier">
+                                <div class="tier-title-bar">
+                                    <span class="tier-name">Partial Staging</span>
+                                    <span class="tier-price">$450–$750</span>
+                                </div>
+                                <p class="tier-desc">Staging up to 2–3 key living areas (living, dining, primary) utilizing your existing furniture blended with light décor styling.</p>
+                            </div>
+                            <div class="sub-service-tier">
+                                <div class="tier-title-bar">
+                                    <span class="tier-name">Full Listing Staging</span>
+                                    <span class="tier-price">$800–$1,500+</span>
+                                </div>
+                                <p class="tier-desc">Whole-home staging strategy, hands-on layout arrangements, premium décor layering, and photo-ready listing setup.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="card-footer">
+                            <button class="btn-primary" onclick="openBookingDrawer('Home Staging')" id="btn-book-staging">Inquire Staging</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service 4: Room Styling/Refresh Service -->
+                <div class="service-card" id="service-room-refresh">
+                    <div class="card-image-box">
+                        <img src="./assets/orig_home_3.png" alt="Room Styling and Refresh service work by Styled By Q" class="card-image" loading="lazy">
+                    </div>
+                    <div class="card-body">
+                        <span class="uppercase-tag">Interior Styling</span>
+                        <h3 class="card-title">Room Styling & Refresh</h3>
+                        <span class="card-price">Starting at $500 per room</span>
+                        <div class="editorial-divider" style="margin: 1rem 0;"></div>
+                        <p class="card-desc">Perfect for refreshing, layering, and elevating a room that has a solid foundation but lacks final styling details.</p>
+                        
+                        <!-- Sub-service tiers -->
+                        <div class="sub-services-grid">
+                            <div class="sub-service-tier">
+                                <div class="tier-title-bar">
+                                    <span class="tier-name">Essential Styling</span>
+                                    <span class="tier-price">Starting at $500</span>
+                                </div>
+                                <p class="tier-desc">Quick in-person styling refresh using what you already have. Focuses on furniture arrangement, art placement, and accessory styling.</p>
+                            </div>
+                            <div class="sub-service-tier">
+                                <div class="tier-title-bar">
+                                    <span class="tier-name">Signature Refresh <span style="font-size: 0.65rem; background-color: var(--accent-green-light); color: var(--accent-green); padding: 2px 6px; font-weight: bold; font-family: var(--font-geometric); vertical-align: middle; margin-left: 5px;">POPULAR</span></span>
+                                    <span class="tier-price">Starting at $750</span>
+                                </div>
+                                <p class="tier-desc">Hands-on decorating experience blending your existing pieces with thoughtfully selected new accents to create a warm, unified space.</p>
+                            </div>
+                            <div class="sub-service-tier">
+                                <div class="tier-title-bar">
+                                    <span class="tier-name">Full Room Transformation</span>
+                                    <span class="tier-price">Starting at $1,100</span>
+                                </div>
+                                <p class="tier-desc">Comprehensive refresh including space planning, item sourcing, personal shopping guidance, and in-home styling placement.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="card-footer">
+                            <button class="btn-primary" onclick="openBookingDrawer('Room Styling & Refresh')" id="btn-book-refresh">Inquire Refresh</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service 5: Signature Service (Full Decorating) -->
+                <div class="service-card" id="service-signature">
+                    <div class="card-image-box">
+                        <img src="./assets/hero_living_room.png" alt="Full view of living room styled with warm neutral accents" class="card-image" loading="lazy">
+                    </div>
+                    <div class="card-body">
+                        <span class="uppercase-tag">Done-For-You Experience</span>
+                        <h3 class="card-title">Full-Service Decorating</h3>
+                        <span class="card-price">Custom Quote based on Scope</span>
+                        <div class="editorial-divider" style="margin: 1rem 0;"></div>
+                        <p class="card-desc">Perfect for clients who want a completely transformed space without the stress of managing the fine details themselves.</p>
+                        <p class="card-desc" style="font-size: 0.88rem; font-style: italic;">✨ A comprehensive, luxury done-for-you decorating experience. I lead the vision for your space from initial conceptual boards and product sourcing to final vendor coordination and complete styled setup.</p>
+                        <div class="card-footer">
+                            <button class="btn-primary" onclick="openBookingDrawer('Full-Service Decorating')" id="btn-book-full">Inquire Custom Project</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service 6: Additional Services -->
+                <div class="service-card" id="service-additional">
+                    <div class="card-image-box">
+                        <img src="./assets/designer_workspace.png" alt="Flatlay of textiles, paint chips, and designer sketches on desk" class="card-image" loading="lazy">
+                    </div>
+                    <div class="card-body">
+                        <span class="uppercase-tag">Specialty Projects</span>
+                        <h3 class="card-title">Additional Styling Services</h3>
+                        <span class="card-price">Quotes based on details</span>
+                        <div class="editorial-divider" style="margin: 1rem 0;"></div>
+                        <p class="card-desc">Looking for finishing touches, seasonal updates, or specialized decorating support? We tailor unique solutions for distinct spaces.</p>
+                        
+                        <ul class="tier-bullets" style="margin: 0.5rem 0 2rem 0.5rem; list-style-type: square;">
+                            <li><strong>Seasonal Styling:</strong> Elegant holiday and seasonal home transformation packages.</li>
+                            <li><strong>Short-Term Rental Setup:</strong> Intentional Airbnb styling to boost listing popularity.</li>
+                            <li><strong>New Homeowner Setup:</strong> Complete space planning and styling as you move in.</li>
+                            <li><strong>Gallery Wall Curation:</strong> Sourcing, mapping, and hanging custom frames.</li>
+                            <li><strong>Entryway and First Impression:</strong> Creating highly inviting foyer entry areas.</li>
+                        </ul>
+                        
+                        <div class="card-footer">
+                            <button class="btn-primary" onclick="openBookingDrawer('Specialty Styling')" id="btn-book-additional">Inquire Special Styling</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about section-padding" id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-image-box">
+                    <img src="./assets/orig_about_image.png" alt="Interior designer Quion Wattree of Styled By Q" class="about-image" loading="lazy">
+                    <div class="about-image-name" style="text-align: center !important; display: block !important; width: 100% !important; margin: 1.5rem auto 0 auto !important; padding-top: 1rem !important; border-top: 1px solid var(--border-color) !important; letter-spacing: 0.2em !important; padding-left: 0.2em !important; font-family: var(--font-geometric) !important; font-size: 0.75rem !important; font-weight: 600 !important; text-transform: uppercase !important; color: var(--text-primary) !important;">Quion Wattree</div>
+                </div>
+                <div class="about-content">
+                    <span class="uppercase-tag">Meet the Interior Decorator</span>
+                    <h2>Spaces designed for welcoming.</h2>
+                    <div class="editorial-divider" style="margin: 1.5rem 0;"></div>
+                    <p>I’m Q, the lead decorator behind Styled By Q. I believe that your home should be an authentic reflection of the life lived inside it—a warm, intentional place of gathering, rest, and inspiration.</p>
+                    <p>My decorating philosophy draws inspiration from timeless modern farmhouse styling, earth-toned palettes, and layered textures. I focus on making spaces feel organic, beautifully structured, and deeply personal, rather than simply putting together a showroom catalog.</p>
+                    <p>Whether we are working together to completely transform your living space, staging a beautiful listing for a swift sale, or styling the perfect gallery wall, my goal is to guide you with care and detail, delivering a home you will love coming home to.</p>
+                    <div class="about-signature">With warmth & intention, — Q.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Slider -->
+    <section class="testimonials section-padding" id="testimonials">
+        <div class="container">
+            <div class="testimonials-title-wrapper">
+                <span class="uppercase-tag">Kind Words</span>
+                <h2>Client Testimonials</h2>
+                <div class="editorial-divider"></div>
+            </div>
+            
+            <div class="testimonial-container">
+                
+                <!-- Slide 1 -->
+                <div class="testimonial-slide active" id="slide-1">
+                    <p class="testimonial-quote">"A shout-out to Quion for her exceptional professionalism and skills. We greatly appreciate the simple, standard way she transformed our home. Every detail was designed just for us—cozy and functional. Now our house is much more than a mere shelter; it lifts us emotionally and spiritually."</p>
+                    <span class="testimonial-author">— Sharon</span>
+                </div>
+                
+                <!-- Slide 2 -->
+                <div class="testimonial-slide" id="slide-2">
+                    <p class="testimonial-quote">"Q completely transformed our dark, uninspired living room into a bright, airy sanctuary that we never want to leave! She listened to our styling ideas and executed a vision that felt perfectly aligned with our family's habits. Absolute magic."</p>
+                    <span class="testimonial-author">— Sarah M. (Decorating Refresh)</span>
+                </div>
+                
+                <!-- Slide 3 -->
+                <div class="testimonial-slide" id="slide-3">
+                    <p class="testimonial-quote">"The Virtual Design Package gave me the exact checklist, measurements, and shopping links I needed. It was incredibly detailed, very easy to execute at our own pace, and gave us a high-end designer look on a budget."</p>
+                    <span class="testimonial-author">— David K. (Virtual Design client)</span>
+                </div>
+                
+                <!-- Slide 4 -->
+                <div class="testimonial-slide" id="slide-4">
+                    <p class="testimonial-quote">"Our staged home received three offers over asking within 48 hours of listing, and the professional real estate photographer was in awe of how styled every room felt. Hiring Q was the absolute best investment we made!"</p>
+                    <span class="testimonial-author">— Elena & James L. (Full Listing Staging)</span>
+                </div>
+                
+            </div>
+            
+            <!-- Controls -->
+            <div class="testimonial-controls">
+                <button class="slider-btn" id="prev-slide-btn" aria-label="Previous testimonial">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+                    </svg>
+                </button>
+                <button class="slider-btn" id="next-slide-btn" aria-label="Next testimonial">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                    </svg>
+                </button>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- Call To Action Banner -->
+    <section class="cta-banner section-padding" id="contact">
+        <div class="container">
+            <h2>Ready to transform your home?</h2>
+            <p>Let's collaborate on creating a space that feels curated, comfortable, and tailored specifically to you. Reach out today for booking availability.</p>
+            <div style="display: flex; flex-direction: column; align-items: center; gap: 1rem;">
+                <button class="btn-outline" onclick="openBookingDrawer('General Inquiry')" id="btn-cta-inquire">Begin Your Styling Project</button>
+                <p style="font-size: 0.85rem; color: rgba(250,248,245,0.7); margin-top: 1rem;">Direct Booking Email: <a href="mailto:sweethomej3q@gmail.com" style="text-decoration: underline; color: var(--bg-primary);">sweethomej3q@gmail.com</a></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Slide-out Drawer Modal (Shopify-inspired overlay) -->
+    <div class="drawer-overlay" id="booking-drawer-overlay">
+        <div class="drawer-container" id="booking-drawer">
+            <div class="drawer-header">
+                <h3 class="drawer-title" id="drawer-title-lbl">Booking Inquiry</h3>
+                <button class="drawer-close" onclick="closeBookingDrawer()" aria-label="Close booking drawer">&times;</button>
+            </div>
+            
+            <div class="drawer-body">
+                <!-- Success Message -->
+                <div class="success-message" id="drawer-success-msg">
+                    <div class="success-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                        </svg>
+                    </div>
+                    <h3>Inquiry Received</h3>
+                    <p style="font-size: 0.9rem; color: var(--text-muted);">Thank you so much! Q will review your home details and reach out to you within 24-48 business hours with next steps.</p>
+                    <button class="btn-primary" onclick="closeBookingDrawer()" style="margin-top: 2rem; width: 100%;">Close Drawer</button>
+                </div>
+                
+                <!-- Inquiry Form -->
+                <form id="booking-inquiry-form" onsubmit="handleFormSubmit(event)">
+                    <div class="form-group">
+                        <label class="form-label" for="client-name">Full Name</label>
+                        <input type="text" id="client-name" class="form-control" placeholder="Enter your full name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label" for="client-email">Email Address</label>
+                        <input type="email" id="client-email" class="form-control" placeholder="yourname@domain.com" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label" for="selected-service">Selected Service</label>
+                        <select id="selected-service" class="form-control" required>
+                            <option value="General Inquiry">General Inquiry</option>
+                            <option value="Decorating Consultation">Decorating Consultation</option>
+                            <option value="Virtual Design Package">Virtual Design Package</option>
+                            <option value="Home Staging">Home Staging (Real Estate)</option>
+                            <option value="Room Styling & Refresh">Room Styling & Refresh</option>
+                            <option value="Full-Service Decorating">Full-Service Decorating (Done-For-You)</option>
+                            <option value="Specialty Styling">Specialty Project Styling</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label" for="client-details">About Your Space</label>
+                        <textarea id="client-details" class="form-control" placeholder="Briefly describe your room, your goals, and your styling dreams..." required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn-primary form-submit-btn" id="btn-submit-inquiry">Send Inquiry</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-top">
+            <div class="container footer-grid">
+                <div class="footer-brand">
+                    <h3>Styled By Q</h3>
+                    <p>Intentional interior decorating services designed to reflect your story and elevate your everyday spaces.</p>
+                    <div class="footer-socials">
+                        <a href="#" class="social-icon" aria-label="Follow us on Pinterest">
+                            <!-- Pinterest Icon SVG -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12 0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738.098.119.112.224.083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.162 0 7.396 2.967 7.396 6.93 0 4.135-2.607 7.462-6.227 7.462-1.216 0-2.359-.631-2.75-1.378l-.749 2.853c-.27 1.03-1.002 2.324-1.492 3.125 1.124.347 2.317.534 3.557.534 6.627 0 12-5.373 12-12 0-6.627-5.373-12-12-12z"/></svg>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="Follow us on Instagram">
+                            <!-- Instagram Icon SVG -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-instagram"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-nav-col">
+                    <h4>Navigation</h4>
+                    <nav class="footer-links">
+                        <a href="#hero">Home</a>
+                        <a href="#services">Services</a>
+                        <a href="#about">About</a>
+                        <a href="#testimonials">Testimonials</a>
+                        <a href="#contact">Contact</a>
+                    </nav>
+                </div>
+                
+                <div class="footer-newsletter">
+                    <h4>Stay Inspired</h4>
+                    <p>Sign up to receive styling tips, seasonal refreshes, and decorating inspiration directly to your inbox.</p>
+                    <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Thank you for subscribing to our mailing list!'); this.reset();">
+                        <input type="email" class="newsletter-input" placeholder="Enter your email" required aria-label="Email address for newsletter subscription">
+                        <button type="submit" class="newsletter-btn">Join</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="container" style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+                <p>&copy; 2026 Styled By Q. All rights reserved. Magnolia Table layout aesthetic emulation.</p>
+                <p>Designed with intention | Waco, Texas</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- App Script -->
+    <script src="app.js"></script>
+</body>
+</html>
