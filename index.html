@@ -372,20 +372,24 @@
                 </div>
                 
                 <!-- Inquiry Form -->
-                <form id="booking-inquiry-form" onsubmit="handleFormSubmit(event)">
+                <form id="booking-inquiry-form" action="https://formsubmit.co/regwattjr@gmail.com" method="POST">
+                    <!-- FormSubmit Configuration -->
+                    <input type="hidden" name="_subject" value="New Website Inquiry | Styled By Q">
+                    <input type="hidden" name="_captcha" value="false">
+                    
                     <div class="form-group">
                         <label class="form-label" for="client-name">Full Name</label>
-                        <input type="text" id="client-name" class="form-control" placeholder="Enter your full name" required>
+                        <input type="text" id="client-name" name="name" class="form-control" placeholder="Enter your full name" required>
                     </div>
                     
                     <div class="form-group">
                         <label class="form-label" for="client-email">Email Address</label>
-                        <input type="email" id="client-email" class="form-control" placeholder="yourname@domain.com" required>
+                        <input type="email" id="client-email" name="email" class="form-control" placeholder="yourname@domain.com" required>
                     </div>
                     
                     <div class="form-group">
                         <label class="form-label" for="selected-service">Selected Service</label>
-                        <select id="selected-service" class="form-control" required>
+                        <select id="selected-service" name="service" class="form-control" required>
                             <option value="General Inquiry">General Inquiry</option>
                             <option value="Decorating Consultation">Decorating Consultation</option>
                             <option value="Virtual Design Package">Virtual Design Package</option>
@@ -398,7 +402,7 @@
                     
                     <div class="form-group">
                         <label class="form-label" for="client-details">About Your Space</label>
-                        <textarea id="client-details" class="form-control" placeholder="Briefly describe your room, your goals, and your styling dreams..." required></textarea>
+                        <textarea id="client-details" name="message" class="form-control" placeholder="Briefly describe your room, your goals, and your styling dreams..." required></textarea>
                     </div>
                     
                     <button type="submit" class="btn-primary form-submit-btn" id="btn-submit-inquiry">Send Inquiry</button>
@@ -458,6 +462,6 @@
     </footer>
 
     <!-- App Script -->
-    <script src="app.js"></script>
+    <script src="app.js?v=2"></script>
 </body>
 </html>
