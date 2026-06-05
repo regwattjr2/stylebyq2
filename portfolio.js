@@ -61,8 +61,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const toggleBtn = card.querySelector('.toggle-badge');
         const viewBefore = card.querySelector('.view-before');
         const viewAfter = card.querySelector('.view-after');
-        
-        let isShowingAfter = true;
+        let isShowingAfter = viewAfter.classList.contains('active');
         
         toggleBtn.addEventListener('click', () => {
             if (isShowingAfter) {
