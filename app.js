@@ -159,4 +159,16 @@ function closeBookingDrawer() {
     document.body.style.overflow = ''; // Unlock background scrolling
 }
 
+// 7. Form Submission Handler
+function handleFormSubmit(event) {
+    // Note: We do NOT call event.preventDefault() because we want the browser
+    // to natively POST to the target hidden iframe.
+    const form = document.getElementById('booking-inquiry-form');
+    const successMsg = document.getElementById('drawer-success-msg');
+
+    // Transition UI to the success message inside the drawer immediately
+    form.style.display = 'none';
+    successMsg.style.display = 'block';
+}
+
 

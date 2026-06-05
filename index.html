@@ -20,7 +20,7 @@
     
     <!-- Styling stylesheet -->
     <link rel="stylesheet" href="index.css?v=3">
-    <link rel="icon" type="image/png" href="./assets/header_logo.png">
+    <link rel="icon" type="image/png" href="./assets/favicon.png">
 </head>
 <body class="gradient">
 
@@ -372,10 +372,11 @@
                 </div>
                 
                 <!-- Inquiry Form -->
-                <form id="booking-inquiry-form" action="https://formsubmit.co/sweethomej3q@gmail.com" method="POST">
+                <form id="booking-inquiry-form" action="https://formsubmit.co/regwattjr@gmail.com" method="POST" target="submit-iframe" onsubmit="handleFormSubmit(event)">
                     <!-- FormSubmit Configuration -->
                     <input type="hidden" name="_subject" value="New Website Inquiry | Styled By Q">
                     <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_autoresponse" value="Thank you for contacting Styled By Q! We have received your inquiry and will reach out to you shortly.">
                     
                     <div class="form-group">
                         <label class="form-label" for="client-name">Full Name</label>
@@ -407,6 +408,9 @@
                     
                     <button type="submit" class="btn-primary form-submit-btn" id="btn-submit-inquiry">Send Inquiry</button>
                 </form>
+                
+                <!-- Hidden Target Iframe to receive FormSubmit response without reloading -->
+                <iframe name="submit-iframe" id="submit-iframe" style="display: none;"></iframe>
             </div>
         </div>
     </div>
