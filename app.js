@@ -3,6 +3,23 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
+    // 0. Post-Redirect Success Detection
+    // After FormSubmit processes the inquiry + sends autoresponse email,
+    // it redirects back here with ?inquiry=success. We detect that and
+    // auto-open the drawer with the success message.
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.get('inquiry') === 'success') {
+        const overlay = document.getElementById('booking-drawer-overlay');
+        const form = document.getElementById('booking-inquiry-form');
+        const successMsg = document.getElementById('drawer-success-msg');
+        overlay.classList.add('open');
+        document.body.style.overflow = 'hidden';
+        form.style.display = 'none';
+        successMsg.style.display = 'block';
+        // Clean up URL so refreshing doesn't re-trigger
+        window.history.replaceState({}, '', window.location.pathname);
+    }
+
     // 1. Sticky Header & Shrink Scroll Effect
     const header = document.getElementById('main-header');
 
@@ -161,14 +178,13 @@ function closeBookingDrawer() {
 
 // 7. Form Submission Handler
 function handleFormSubmit(event) {
-    // Note: We do NOT call event.preventDefault() because we want the browser
-    // to natively POST to the target hidden iframe.
-    const form = document.getElementById('booking-inquiry-form');
-    const successMsg = document.getElementById('drawer-success-msg');
-
-    // Transition UI to the success message inside the drawer immediately
-    form.style.display = 'none';
-    successMsg.style.display = 'block';
+    // Dynamically set the _next URL so FormSubmit redirects back here
+    // after the user confirms submission and both emails are sent.
+    const nextUrl = document.getElementById('form-next-url');
+    if (nextUrl) {
+        nextUrl.value = window.location.href.split('?')[0] + '?inquiry=success';
+    }
+    // Allow the form to submit naturally (no preventDefault).
+    // The browser will navigate to FormSubmit's confirmation page,
+    // then redirect back here with ?inquiry=success.
 }
-
-

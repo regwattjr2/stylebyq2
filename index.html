@@ -372,11 +372,11 @@
                 </div>
                 
                 <!-- Inquiry Form -->
-                <form id="booking-inquiry-form" action="https://formsubmit.co/info@styledbyqinteriors.com" method="POST" target="submit-iframe" onsubmit="handleFormSubmit(event)">
+                <form id="booking-inquiry-form" action="https://formsubmit.co/info@styledbyqinteriors.com" method="POST" onsubmit="handleFormSubmit(event)">
                     <!-- FormSubmit Configuration -->
                     <input type="hidden" name="_subject" value="New Website Inquiry | Styled By Q">
-                    <input type="hidden" name="_captcha" value="false">
-                    <input type="hidden" name="_autoresponse" value="Thank you for contacting Styled By Q! We have received your inquiry and will reach out to you shortly.">
+                    <input type="hidden" name="_next" id="form-next-url" value="">
+                    <input type="hidden" name="_autoresponse" value="Thank you for contacting Styled By Q! We have received your inquiry and someone will contact you shortly.">
                     
                     <div class="form-group">
                         <label class="form-label" for="client-name">Full Name</label>
@@ -408,9 +408,7 @@
                     
                     <button type="submit" class="btn-primary form-submit-btn" id="btn-submit-inquiry">Send Inquiry</button>
                 </form>
-                
-                <!-- Hidden Target Iframe to receive FormSubmit response without reloading -->
-                <iframe name="submit-iframe" id="submit-iframe" style="display: none;"></iframe>
+
             </div>
         </div>
     </div>
