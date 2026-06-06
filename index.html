@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Security Headers -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; form-action https://formsubmit.co; frame-ancestors 'none'; base-uri 'self';">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
     
     <!-- SEO Optimization -->
     <title>Styled By Q | Intentional Interior Decorating & Home Staging Services</title>
@@ -42,14 +46,18 @@
             </nav>
             
             <div class="cta-nav">
-                <button class="btn-outline" onclick="openBookingDrawer('General Inquiry')" id="btn-header-inquire">Inquire</button>
+                <button class="btn-outline" id="btn-header-inquire">Inquire</button>
             </div>
             
             <button class="menu-toggle" id="mobile-menu-btn" aria-label="Toggle navigation menu">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <svg class="icon-hamburger" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <line x1="4" y1="12" x2="20" y2="12"></line>
                     <line x1="4" y1="6" x2="20" y2="6"></line>
                     <line x1="4" y1="18" x2="20" y2="18"></line>
+                </svg>
+                <svg class="icon-close" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
                 </svg>
             </button>
         </div>
@@ -65,7 +73,7 @@
                     <p>I provide intentional interior decorating services that elevate your home through thoughtfully curated styling, organic textures, and a deeply personalized approach to your unique lifestyle.</p>
                     <div style="display: flex; gap: 1rem;">
                         <a href="#services" class="btn-primary" id="btn-hero-explore">Explore Services</a>
-                        <button class="btn-outline" onclick="openBookingDrawer('General Consultation')" id="btn-hero-consult">Book Consultation</button>
+                        <button class="btn-outline" id="btn-hero-consult">Book Consultation</button>
                     </div>
                 </div>
                 <div class="hero-image-wrapper">
@@ -109,7 +117,7 @@
                         <p class="card-desc">Perfect for clients who need expert direction, structural layout clarity, and a confident plan of action before getting started on their design journey.</p>
                         <p class="card-desc" style="font-size: 0.88rem; font-style: italic;">✨ A personalized in-home or virtual session designed to assess your space. Includes customized layout recommendations, color palette guidance, and décor direction—giving you the clarity to move forward with absolute ease.</p>
                         <div class="card-footer">
-                            <button class="btn-primary" onclick="openBookingDrawer('Decorating Consultation')" id="btn-book-consult">Book Consultation</button>
+                            <button class="btn-primary" id="btn-book-consult">Book Consultation</button>
                         </div>
                     </div>
                 </div>
@@ -127,7 +135,7 @@
                         <p class="card-desc">Perfect for clients who want a cohesive, professionally designed plan and the flexibility to shop and bring their space to life at their own pace.</p>
                         <p class="card-desc" style="font-size: 0.88rem; font-style: italic;">✨ You’ll receive a fully customized virtual decorating experience and visual blueprint. This includes a curated digital mood board, intentional color palette, hand-selected furniture/décor list with shopping links, and layout guidance.</p>
                         <div class="card-footer">
-                            <button class="btn-primary" onclick="openBookingDrawer('Virtual Design Package')" id="btn-book-virtual">Inquire Package</button>
+                            <button class="btn-primary" id="btn-book-virtual">Inquire Package</button>
                         </div>
                     </div>
                 </div>
@@ -170,7 +178,7 @@
                         </div>
                         
                         <div class="card-footer">
-                            <button class="btn-primary" onclick="openBookingDrawer('Home Staging')" id="btn-book-staging">Inquire Staging</button>
+                            <button class="btn-primary" id="btn-book-staging">Inquire Staging</button>
                         </div>
                     </div>
                 </div>
@@ -213,7 +221,7 @@
                         </div>
                         
                         <div class="card-footer">
-                            <button class="btn-primary" onclick="openBookingDrawer('Room Styling & Refresh')" id="btn-book-refresh">Inquire Refresh</button>
+                            <button class="btn-primary" id="btn-book-refresh">Inquire Refresh</button>
                         </div>
                     </div>
                 </div>
@@ -231,7 +239,7 @@
                         <p class="card-desc">Perfect for clients who want a completely transformed space without the stress of managing the fine details themselves.</p>
                         <p class="card-desc" style="font-size: 0.88rem; font-style: italic;">✨ A comprehensive, luxury done-for-you decorating experience. I lead the vision for your space from initial conceptual boards and product sourcing to final vendor coordination and complete styled setup.</p>
                         <div class="card-footer">
-                            <button class="btn-primary" onclick="openBookingDrawer('Full-Service Decorating')" id="btn-book-full">Inquire Custom Project</button>
+                            <button class="btn-primary" id="btn-book-full">Inquire Custom Project</button>
                         </div>
                     </div>
                 </div>
@@ -257,7 +265,7 @@
                         </ul>
                         
                         <div class="card-footer">
-                            <button class="btn-primary" onclick="openBookingDrawer('Specialty Styling')" id="btn-book-additional">Inquire Special Styling</button>
+                            <button class="btn-primary" id="btn-book-additional">Inquire Special Styling</button>
                         </div>
                     </div>
                 </div>
@@ -344,8 +352,8 @@
             <h2>Ready to transform your home?</h2>
             <p>Let's collaborate on creating a space that feels curated, comfortable, and tailored specifically to you. Reach out today for booking availability.</p>
             <div style="display: flex; flex-direction: column; align-items: center; gap: 1rem;">
-                <button class="btn-outline" onclick="openBookingDrawer('General Inquiry')" id="btn-cta-inquire">Begin Your Styling Project</button>
-                <p style="font-size: 0.85rem; color: rgba(250,248,245,0.7); margin-top: 1rem;">Direct Booking Email: <a href="mailto:info@styledbyqinteriors.com" style="text-decoration: underline; color: var(--bg-primary);">info@styledbyqinteriors.com</a></p>
+                <button class="btn-outline" id="btn-cta-inquire">Begin Your Styling Project</button>
+                <p style="font-size: 0.85rem; color: rgba(250,248,245,0.7); margin-top: 1rem;">Direct Booking Email: <a id="email-link" href="#" style="text-decoration: underline; color: var(--bg-primary);">[click to reveal]</a></p>
             </div>
         </div>
     </section>
@@ -355,7 +363,7 @@
         <div class="drawer-container" id="booking-drawer">
             <div class="drawer-header">
                 <h3 class="drawer-title" id="drawer-title-lbl">Booking Inquiry</h3>
-                <button class="drawer-close" onclick="closeBookingDrawer()" aria-label="Close booking drawer">&times;</button>
+                <button class="drawer-close" id="btn-drawer-close" aria-label="Close booking drawer">&times;</button>
             </div>
             
             <div class="drawer-body">
@@ -368,15 +376,17 @@
                     </div>
                     <h3>Inquiry Received</h3>
                     <p style="font-size: 0.9rem; color: var(--text-muted);">Thank you so much! Q will review your home details and reach out to you within 24-48 business hours with next steps.</p>
-                    <button class="btn-primary" onclick="closeBookingDrawer()" style="margin-top: 2rem; width: 100%;">Close Drawer</button>
+                    <button class="btn-primary" id="btn-success-close" style="margin-top: 2rem; width: 100%;">Close Drawer</button>
                 </div>
                 
                 <!-- Inquiry Form -->
-                <form id="booking-inquiry-form" action="https://formsubmit.co/info@styledbyqinteriors.com" method="POST" onsubmit="handleFormSubmit(event)">
+                <form id="booking-inquiry-form" action="https://formsubmit.co/info@styledbyqinteriors.com" method="POST">
                     <!-- FormSubmit Configuration -->
                     <input type="hidden" name="_subject" value="New Website Inquiry | Styled By Q">
                     <input type="hidden" name="_next" id="form-next-url" value="">
                     <input type="hidden" name="_autoresponse" value="Thank you for contacting Styled By Q! We have received your inquiry and someone will contact you shortly.">
+                    <input type="hidden" name="_captcha" value="true">
+                    <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
                     
                     <div class="form-group">
                         <label class="form-label" for="client-name">Full Name</label>
@@ -421,11 +431,11 @@
                     <h3>Styled By Q</h3>
                     <p>Intentional interior decorating services designed to reflect your story and elevate your everyday spaces.</p>
                     <div class="footer-socials">
-                        <a href="#" class="social-icon" aria-label="Follow us on Pinterest">
+                        <a href="#" class="social-icon" aria-label="Follow us on Pinterest" target="_blank" rel="noopener noreferrer">
                             <!-- Pinterest Icon SVG -->
                             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12 0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738.098.119.112.224.083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.162 0 7.396 2.967 7.396 6.93 0 4.135-2.607 7.462-6.227 7.462-1.216 0-2.359-.631-2.75-1.378l-.749 2.853c-.27 1.03-1.002 2.324-1.492 3.125 1.124.347 2.317.534 3.557.534 6.627 0 12-5.373 12-12 0-6.627-5.373-12-12-12z"/></svg>
                         </a>
-                        <a href="#" class="social-icon" aria-label="Follow us on Instagram">
+                        <a href="#" class="social-icon" aria-label="Follow us on Instagram" target="_blank" rel="noopener noreferrer">
                             <!-- Instagram Icon SVG -->
                             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-instagram"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
                         </a>
@@ -447,7 +457,7 @@
                 <div class="footer-newsletter">
                     <h4>Stay Inspired</h4>
                     <p>Sign up to receive styling tips, seasonal refreshes, and decorating inspiration directly to your inbox.</p>
-                    <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Thank you for subscribing to our mailing list!'); this.reset();">
+                    <form class="newsletter-form" id="newsletter-form">
                         <input type="email" class="newsletter-input" placeholder="Enter your email" required aria-label="Email address for newsletter subscription">
                         <button type="submit" class="newsletter-btn">Join</button>
                     </form>

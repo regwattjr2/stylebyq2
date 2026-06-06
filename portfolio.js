@@ -1,5 +1,6 @@
 /**
  * Styled By Q - Portfolio Page Interactions
+ * Security: No innerHTML usage, no inline event handlers
  */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -14,16 +15,14 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // 2. Mobile Responsive Navigation Toggle matching index.html
+    // 2. Mobile Navigation Toggle
+    // Uses CSS class toggling instead of innerHTML to prevent XSS vectors.
     const mobileMenuBtn = document.getElementById('mobile-menu-btn');
     const mainNav = document.getElementById('main-nav');
 
     mobileMenuBtn.addEventListener('click', () => {
         mainNav.classList.toggle('open');
-        const isOpen = mainNav.classList.contains('open');
-        mobileMenuBtn.innerHTML = isOpen 
-            ? `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>`
-            : `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="12" x2="20" y2="12"></line><line x1="4" y1="6" x2="20" y2="6"></line><line x1="4" y1="18" x2="20" y2="18"></line></svg>`;
+        mobileMenuBtn.classList.toggle('active');
     });
 
     // 3. Before/After Sliders Logic
@@ -31,9 +30,6 @@ document.addEventListener('DOMContentLoaded', () => {
     
     sliders.forEach(slider => {
         const range = slider.querySelector('.slider-range');
-        const revealContainer = slider.querySelector('.reveal-container');
-        const bar = slider.querySelector('.slider-bar');
-        const button = slider.querySelector('.slider-button');
         
         function updateSlider(value) {
             // Set the custom CSS variable for modern squeeze-free clip-path
@@ -81,4 +77,14 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
+    // 5. Newsletter Form Handler (moved from inline onsubmit)
+    const newsletterForm = document.getElementById('newsletter-form-portfolio');
+    if (newsletterForm) {
+        newsletterForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Thank you for subscribing!');
+            newsletterForm.reset();
+        });
+    }
 });

@@ -261,6 +261,17 @@ header.scrolled .logo-img {
     stroke: var(--bg-primary) !important;
 }
 
+/* Menu icon toggle — CSS-based show/hide replaces innerHTML for XSS prevention */
+.menu-toggle .icon-close {
+    display: none;
+}
+.menu-toggle.active .icon-hamburger {
+    display: none;
+}
+.menu-toggle.active .icon-close {
+    display: block;
+}
+
 /* Hero Section (Asymmetric Editorial Split) */
 .hero {
     background-color: var(--bg-primary);
